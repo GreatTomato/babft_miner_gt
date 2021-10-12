@@ -1,5 +1,5 @@
 function d()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 125, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 105, 0)
 end
 
 function tpd(x1, y1, z1)
@@ -7,7 +7,7 @@ function tpd(x1, y1, z1)
     do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
         d()
-        wait(1)
+        wait(1.05)
     end
 end
 x2=game.Players.LocalPlayer.Character.UpperTorso.Position.X
@@ -17,9 +17,15 @@ start = true
 function masss()
 --local var = game.Players.LocalPlayer.Character.UpperTorso.Position
 local varZ = game.Players.LocalPlayer.Character.UpperTorso.Position.Z
-    if (varZ<1000) and (start)then
-        --[[x=x2
+    wait(2)
+    if (game.Players.LocalPlayer.Character.UpperTorso.Position.Y<-10) --[[and not(start)]] then --[[wait(2)]] start = true end
+    if --[[(game.Players.LocalPlayer.Character.UpperTorso.Position.Y>-5) and ]](varZ<1000) then
+    wait(2.1)
+    varZ = game.Players.LocalPlayer.Character.UpperTorso.Position.Z
+    if  (start) and (varZ<1000) then
         start = false
+        --[[x=x2
+        
         y=y2
         z=z2]
         tpd(x, y, z)]]
@@ -41,10 +47,9 @@ local varZ = game.Players.LocalPlayer.Character.UpperTorso.Position.Z
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
             wait(15)
         end
-	wait(10)
-        start = true
 		--game:service'Players'.LocalPlayer.Idled:connect(function()
 		--bb:CaptureController()bb:ClickButton2(Vector2.new())
+    end
     end
 end
 --while true do masss() end
