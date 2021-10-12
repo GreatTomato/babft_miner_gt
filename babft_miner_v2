@@ -41,7 +41,7 @@ local varZ = game.Players.LocalPlayer.Character.UpperTorso.Position.Z
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
             wait(15)
         end
-	wait(2)
+	wait(10)
         start = true
 		--game:service'Players'.LocalPlayer.Idled:connect(function()
 		--bb:CaptureController()bb:ClickButton2(Vector2.new())
