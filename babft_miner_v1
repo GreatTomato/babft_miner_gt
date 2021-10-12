@@ -1,0 +1,52 @@
+function d()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0, 125, 0)
+end
+
+function tpd(x1, y1, z1)
+    for i = 0,1,1 
+    do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
+        d()
+        wait(1)
+    end
+end
+x2=game.Players.LocalPlayer.Character.UpperTorso.Position.X
+y2=30
+z2=game.Players.LocalPlayer.Character.UpperTorso.Position.Z
+function masss()
+--local var = game.Players.LocalPlayer.Character.UpperTorso.Position
+local varZ = game.Players.LocalPlayer.Character.UpperTorso.Position.Z
+    if (varZ<1000) and (game.Players.LocalPlayer.Character.UpperTorso.Position.Y<10)then
+        --[[x=x2
+        y=y2
+        z=z2]
+        tpd(x, y, z)]]
+        x=-51.5656
+        y=65
+        z=1369.09
+        --tpd(x,y,z)
+        for i = 0,8,1 
+        do
+            tpd(x, y, z)
+            z=z+770
+        end
+        tpd(x, y, z)
+        z=z+1200
+        y=-359
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
+        wait(15)
+        while game.Players.LocalPlayer.Character.UpperTorso.Position.Y < -300 do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
+            wait(15)
+        end
+		--game:service'Players'.LocalPlayer.Idled:connect(function()
+		--bb:CaptureController()bb:ClickButton2(Vector2.new())
+    end
+end
+--while true do masss() end
+local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()
+bb:ClickButton2(Vector2.new())end)
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x2,y2,z2)
+game:GetService('RunService').Heartbeat:Connect(masss)
