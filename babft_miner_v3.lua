@@ -44,7 +44,7 @@ local function SPCB_fake_script() -- OnOff.OnOff
 		print("SomeBullshitOnOff")
     workspace.OnOffBool.Value = not(workspace.OnOffBool.Value)	
     local conn = game:GetService('RunService').Heartbeat:Connect(function()
-    if workspace.OnOffBool.Vaue then
+    if workspace.OnOffBool.Value then
         conn:Disconnect() -- bam
     end
   masss()
