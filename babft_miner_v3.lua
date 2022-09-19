@@ -43,6 +43,12 @@ local function SPCB_fake_script() -- OnOff.OnOff
 	local function onButtonActivated()
 		print("SomeBullshitOnOff")
     workspace.OnOffBool.Value = not(workspace.OnOffBool.Value)	
+    local conn = game:GetService('RunService').Heartbeat:Connect(function()
+    if workspace.OnOffBool.Vaue then
+        conn:Disconnect() -- bam
+    end
+  masss()
+  end)
 	end
 	
 	button.Activated:Connect(onButtonActivated)
