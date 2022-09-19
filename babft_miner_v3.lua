@@ -134,7 +134,7 @@ bb:CaptureController()
 bb:ClickButton2(Vector2.new())end)
 --game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x2,y2,z2)
 local conn = game:GetService('RunService').Heartbeat:Connect(function()
-    if workspace.OnOffBool.Vaue then
+    if workspace.OnOffBool.Value then
         conn:Disconnect() -- bam
     end
   masss()
