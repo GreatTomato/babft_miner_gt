@@ -43,13 +43,13 @@ local function SPCB_fake_script() -- OnOff.OnOff
 	local function onButtonActivated()
 		print("SomeBullshitOnOff")
     workspace.OnOffBool.Value = not(workspace.OnOffBool.Value)	
-   --[[ local conn1; 
+   if workspace.OnOffBool.Value == true then local conn1; 
 conn1 = game:GetService("RunService").Heartbeat:Connect(function()
     if workspace.OnOffBool.Value then
         conn1:Disconnect() -- bam
     end
   masss()
-  end)]]
+  end) end
 	end
 	
 	button.Activated:Connect(onButtonActivated)
@@ -135,9 +135,9 @@ bb:CaptureController()
 bb:ClickButton2(Vector2.new())end)
 --game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x2,y2,z2)
 local conn
-conn = game:GetService('RunService').Heartbeat:Connect(function()
+--[[conn = game:GetService('RunService').Heartbeat:Connect(function()
   masss()
     if workspace.OnOffBool.Value == true then
         conn:Disconnect() -- bam
     end
-  end)
+  end)]]
